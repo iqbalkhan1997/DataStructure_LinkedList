@@ -59,6 +59,14 @@ public class SinglyLinkedList {
         this.head = this.head.next;
         return tempNode;
     }
+    public void popLast() {
+        Node tempNode = head;
+        while (! tempNode.next.equals(this.tail)) {
+            tempNode = tempNode.next; // 30
+        }
+        this.tail = tempNode;
+        tempNode.next = null;
+    }
 
     }
 

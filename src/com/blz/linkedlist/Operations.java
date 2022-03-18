@@ -38,4 +38,11 @@ public class Operations {
         list.display();
     }
 
+    public void deleteNodeFromEnd() {
+        SinglyLinkedList list = addElementInStart();
+        System.out.println();
+        list.popLast();
+        list.display();
+    }
+
 }
