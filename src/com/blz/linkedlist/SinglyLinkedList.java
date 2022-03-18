@@ -9,7 +9,7 @@ public class SinglyLinkedList {
         this.head=null;
         this.tail=null;
     }
-    public void append(int data){
+    public Node append(int data){
         newNode = new Node(data);
         if(head==null){
             head=newNode;
@@ -18,9 +18,10 @@ public class SinglyLinkedList {
             tail.next=newNode;
             tail=newNode;
         }
+        return newNode;
     }
 
-    public void push(int data){
+    public Node push(int data){
         newNode = new Node(data);
         if(head==null){
             head=newNode;
@@ -30,6 +31,7 @@ public class SinglyLinkedList {
             head=newNode;
             head.next=temp;
         }
+        return newNode;
     }
 
     public void display(){
@@ -45,5 +47,12 @@ public class SinglyLinkedList {
             }
         System.out.println();
         }
+
+    public void insertInBetween(Node node, Node newNode) {
+        Node temp = node.next;
+        node.next = newNode;
+        newNode.next = temp;
+    }
+
     }
 

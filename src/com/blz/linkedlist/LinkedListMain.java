@@ -9,6 +9,7 @@ public class LinkedListMain {
         System.out.println("Welcome to LinkedList program");
         System.out.println("1.To add elements at the start");
         System.out.println("2.To add elements at the end");
+        System.out.println("3.To add element In between");
         System.out.println("Enter number to perform the operation");
         Scanner scan = new Scanner(System.in);
         int operation=scan.nextInt();
@@ -18,6 +19,9 @@ public class LinkedListMain {
                 break;
             case 2:
                 option.addElementAtEnd();
+                break;
+            case 3:
+                option.insertNodeInBetween();
                 break;
             default:
                 System.out.println("Please enter the valid option");
