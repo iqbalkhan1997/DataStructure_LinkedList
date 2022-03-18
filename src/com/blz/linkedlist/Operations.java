@@ -2,12 +2,13 @@ package com.blz.linkedlist;
 
 public class Operations {
 
-    public void addElementInStart(){
+    public SinglyLinkedList addElementInStart(){
     SinglyLinkedList list = new SinglyLinkedList();
         list.push(70);
         list.push(30);
         list.push(56);
         list.display();
+        return list;
     }
     public SinglyLinkedList addElementAtEnd(){
         SinglyLinkedList list = new SinglyLinkedList();
@@ -29,4 +30,12 @@ public class Operations {
         System.out.println("After");
         list.display();
     }
+
+    public void deleteNodeFromStart() {
+        SinglyLinkedList list = addElementInStart();
+        System.out.println();
+        list.pop();
+        list.display();
+    }
+
 }

@@ -54,5 +54,11 @@ public class SinglyLinkedList {
         newNode.next = temp;
     }
 
+    public Node pop() {
+        Node tempNode = this.head;
+        this.head = this.head.next;
+        return tempNode;
+    }
+
     }
 
