@@ -60,21 +60,17 @@ public class Operations {
             list.InsertElementInMiddle(30,40);
         }
 
-    public SinglyLinkedList deleteElement() {
+    public void deleteElement() {
         SinglyLinkedList list = new SinglyLinkedList();
         list.append(56);
         list.append(30);
         list.append(40);
         list.append(70);
         list.display();
-
         System.out.println("After deleting the key");
         list.deleteNode(40);
-
-        list.size();
+        System.out.println(list.size());
         list.display();
-
-
-        return list;
     }
+
 }
