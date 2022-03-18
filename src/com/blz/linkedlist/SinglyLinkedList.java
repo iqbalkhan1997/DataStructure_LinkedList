@@ -9,7 +9,7 @@ public class SinglyLinkedList {
         this.head=null;
         this.tail=null;
     }
-    public void addElementAtEnd(int data){
+    public void append(int data){
         newNode = new Node(data);
         if(head==null){
             head=newNode;
@@ -17,6 +17,18 @@ public class SinglyLinkedList {
         } else {
             tail.next=newNode;
             tail=newNode;
+        }
+    }
+
+    public void push(int data){
+        newNode = new Node(data);
+        if(head==null){
+            head=newNode;
+            tail=newNode;
+        } else {
+            Node temp=head;
+            head=newNode;
+            head.next=temp;
         }
     }
 

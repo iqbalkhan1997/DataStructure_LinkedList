@@ -1,13 +1,27 @@
 package com.blz.linkedlist;
 
+import java.util.Scanner;
+
 public class LinkedListMain {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to data structure's linkedList program");
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.addElementAtEnd(56);
-        list.addElementAtEnd(30);
-        list.addElementAtEnd(70);
-        list.display();
+        Operations option = new Operations();
+        System.out.println("Welcome to LinkedList program");
+        System.out.println("1.To add elements at the start");
+        System.out.println("2.To add elements at the end");
+        System.out.println("Enter number to perform the operation");
+        Scanner scan = new Scanner(System.in);
+        int operation=scan.nextInt();
+        switch (operation){
+            case 1:
+                option.addElementInStart();
+                break;
+            case 2:
+                option.addElementAtEnd();
+                break;
+            default:
+                System.out.println("Please enter the valid option");
+                break;
+        }
     }
 }
