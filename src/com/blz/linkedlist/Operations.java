@@ -46,7 +46,7 @@ public class Operations {
         list.popLast();
         list.display();
     }
-    public void search(){
+    public void searchNode(){
         System.out.println("Enter the element you want to search");
         Scanner scan = new Scanner(System.in);
         int elementToFind = scan.nextInt();
@@ -54,11 +54,27 @@ public class Operations {
         list.find(elementToFind);
     }
 
-        public void InsertInMiddle() {
+        public void InsertNodeInMiddle() {
             SinglyLinkedList list = addElementInStart();
             System.out.println();
-            list.InsertInMiddle(30,40);
+            list.InsertElementInMiddle(30,40);
         }
 
+    public SinglyLinkedList deleteElement() {
+        SinglyLinkedList list = new SinglyLinkedList();
+        list.append(56);
+        list.append(30);
+        list.append(40);
+        list.append(70);
+        list.display();
 
+        System.out.println("After deleting the key");
+        list.deleteNode(40);
+
+        list.size();
+        list.display();
+
+
+        return list;
+    }
 }

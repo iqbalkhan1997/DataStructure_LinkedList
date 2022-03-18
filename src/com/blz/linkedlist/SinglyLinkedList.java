@@ -91,7 +91,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public void InsertInMiddle(int firstElement, int element) {
+    public void InsertElementInMiddle(int firstElement, int element) {
         Node exists = head;
         Node newNode = new Node(element);
         if (head == null) {
@@ -107,6 +107,30 @@ public class SinglyLinkedList {
         }
         System.out.println();
         display();
+    }
+
+    public int size() {
+        int length = 0;
+        Node temp = head;
+        while (temp != null) {
+            length++;
+            temp = temp.next;
+        }
+        return length;
+    }
+
+    public void deleteNode(int key) {
+        Node current = head;
+        Node tempNode = null;
+        while (current != null && current.data != key) {
+            tempNode = current;
+            current = current.next;
+
+        }
+        if (current == null) {
+            return;
+        }
+        tempNode.next = current.next;
     }
 
 }
