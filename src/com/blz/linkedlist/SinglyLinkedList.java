@@ -68,5 +68,26 @@ public class SinglyLinkedList {
         tempNode.next = null;
     }
 
+    public void finding(int element) {
+        Node current = head;
+        if (head == null) {
+            System.out.println("List is Empty");
+        }
+        int found = 0;
+        while (current != null) {
+            if (current.data == element) {
+                found = 1;
+                break;
+            } else {
+                current = current.next;
+            }
+        }
+        if (found == 1) {
+            System.out.println("Entered number is present in list");
+        } else {
+            System.out.println("Entered number is not in the list");
+        }
+    }
+
     }
 

@@ -1,5 +1,7 @@
 package com.blz.linkedlist;
 
+import java.util.Scanner;
+
 public class Operations {
 
     public SinglyLinkedList addElementInStart(){
@@ -44,5 +46,13 @@ public class Operations {
         list.popLast();
         list.display();
     }
+    public void search(){
+        System.out.println("Enter the element you want to search");
+        Scanner scan = new Scanner(System.in);
+        int elementToFind = scan.nextInt();
+        SinglyLinkedList list = addElementInStart();
+        list.finding(elementToFind);
+    }
+
 
 }
