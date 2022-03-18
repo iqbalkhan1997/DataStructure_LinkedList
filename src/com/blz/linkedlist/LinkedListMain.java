@@ -12,7 +12,8 @@ public class LinkedListMain {
         System.out.println("3.To add element In between");
         System.out.println("4.To Delete element at start from linked list");
         System.out.println("5.To Delete element at end from linked list");
-        System.out.println("6.To Find element fom linked list");
+        System.out.println("6.To Find element from linked list");
+        System.out.println("7.To Insert element to the existing linked list");
         System.out.println("Enter number to perform the operation");
         Scanner scan = new Scanner(System.in);
         int operation=scan.nextInt();
@@ -34,6 +35,9 @@ public class LinkedListMain {
                 break;
             case 6:
                 option.search();
+                break;
+            case 7:
+                option.InsertInMiddle();
                 break;
             default:
                 System.out.println("Please enter the valid option");

@@ -51,8 +51,14 @@ public class Operations {
         Scanner scan = new Scanner(System.in);
         int elementToFind = scan.nextInt();
         SinglyLinkedList list = addElementInStart();
-        list.finding(elementToFind);
+        list.find(elementToFind);
     }
+
+        public void InsertInMiddle() {
+            SinglyLinkedList list = addElementInStart();
+            System.out.println();
+            list.InsertInMiddle(30,40);
+        }
 
 
 }

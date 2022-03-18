@@ -1,5 +1,7 @@
 package com.blz.linkedlist;
 
+import java.util.Scanner;
+
 public class SinglyLinkedList {
     Node newNode;
     Node head;
@@ -68,7 +70,7 @@ public class SinglyLinkedList {
         tempNode.next = null;
     }
 
-    public void finding(int element) {
+    public void find(int element) {
         Node current = head;
         if (head == null) {
             System.out.println("List is Empty");
@@ -89,5 +91,23 @@ public class SinglyLinkedList {
         }
     }
 
+    public void InsertInMiddle(int firstElement, int element) {
+        Node exists = head;
+        Node newNode = new Node(element);
+        if (head == null) {
+            System.out.println("List is Empty");
+        }
+        while (exists != null) {
+            if (exists.data == firstElement) {
+                insertInBetween(exists,newNode);
+                break;
+            } else {
+                exists = exists.next;
+            }
+        }
+        System.out.println();
+        display();
     }
+
+}
 
